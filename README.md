@@ -18,5 +18,59 @@ The data cleaning and preparation stage includes:
 2. Managing any missing or incomplete values  
 3. Formatting and cleaning the data to ensure consistency and readiness for analysis
 
+### Exploratory Data Analysis 
+- EDA focused on analyzing the dataset to uncover insights and answer key business questions such as:  
+  - Which product category had the highest sales?
+  - What are the Top 3 and Bottom 3 regions in terms of sales?
+  - What were the total sales of appliances in Ontario?
+  - Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
+  - KMS incurred the most shipping cost using which shipping method?
+  - Who are the most valuable customers, and what products or services do they typicall purchase?
+  - Which small business customer had the highest sales?
+  - Which Corporate Customer placed the most number of orders in 2009 – 2012?
+  - Which consumer customer was the most profitable one?
+  - Which customer returned items, and what segment do they belong to?
+  - If the delivery truck is the most economical but the slowest shipping method and
+Express Air is the fastest but the most expensive one, do you think the company
+appropriately spent shipping costs based on the Order Priority? Explain your answer
+
+### Data Analysis  
+Here, I present essential code, queries, I applied throughout the data analysis to derive meaningful insights.
+
+### SQL QUERIES AND ANSWERS 
+- To get Which product category had the highest sales, run the below query.
+  - The result given is "Technology Category" with Total_Sales of "5984248.183"
+
+  ```` Sql
+   SELECT 
+    Product_category, 
+    SUM(Sales) AS Total_Sales
+   FROM 
+    [dbo].[KMS Sql Case Study]
+  GROUP BY 
+    Product_category
+  ORDER BY 
+    Total_Sales DESC
+  ````
+
+- To get the Top 3 and Bottom 3 regions in terms of sales, run the below query.
+  - Top 3 region are "West, Ontario, Prarie"
+  - Bottom 3 region are "Nunavut, Northwest Territories, Yukon"
+
+```` sql
+   SELECT TOP 3
+	Region, sum(Sales) as total_sales
+FROM [dbo].[KMS Sql Case Study]
+GROUP BY Region
+order by total_sales desc
+
+
+SELECT TOP 3
+	Region, sum(Sales) as total_sales
+FROM [dbo].[KMS Sql Case Study]
+GROUP BY Region
+order by total_sales ASC
+````
+
 
 
