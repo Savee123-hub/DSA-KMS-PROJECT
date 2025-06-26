@@ -84,4 +84,50 @@ GROUP BY Region,Product_Sub_Category
 order by total_sales
 ````
 
+- KMS incurred the most shipping cost using which shipping method, run the below query.
+  - The result given is "Delivery Truck"
+
+```` Sql
+  select 
+ship_mode,sum (shipping_cost)as total_cost
+from [dbo].[KMS Sql Case Study]
+group by ship_mode
+order by total_cost desc
+````
+
+- To get the most valuable customers, and the products or services they typicall purchase, run the below query.
+
+```` sql
+  select top 10
+Customer_Name,product_Name,sum(Profit) as total_profit
+from [dbo].[KMS Sql Case Study]
+group by Customer_Name, product_Name
+order by total_profit desc
+````
+- The result given:
+  - Top Valuable Customers and Their Most Purchased Products
+    
+| Customer Name       | Most Profitable Product                                                                          | Total Profit |
+|---------------------|--------------------------------------------------------------------------------------------------|--------------|
+| Emily Phan          | Polycom ViewStation™ ISDN Videoconferencing Unit                                                 | 27,221.00    |
+| Clytie Kelty        | Canon PC940 Copier                                                                               | 15,601.00    |
+| Andy Reiter         | Polycom ViaVideo™ Desktop Video Communications Unit                                              | 14,440.00    |
+| Deborah Brumfield   | Hewlett Packard LaserJet 3310 Copier                                                             | 13,340.00    |
+| Karen Carlisle      | Canon Image Class D660 Copier                                                                    | 12,749.00    |
+| Rick Wilson         | HP Business Color Inkjet 3000 [N, DTN] Series Printers                                           | 12,607.00    |
+| Raymond Book        | Hewlett Packard LaserJet 3310 Copier                                                             | 11,984.00    |
+| Logan Haushalter    | Hewlett Packard LaserJet 3310 Copier                                                             | 11,630.00    |
+| Nick Crebassa       | HP Business Color Inkjet 3000 [N, DTN] Series Printers                                           | 11,562.00    |
+| John Stevenson      | Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind                      | 11,535.00    |
+
+
+
+
+
+
+
+
+
+
+
 
