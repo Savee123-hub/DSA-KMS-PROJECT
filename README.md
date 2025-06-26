@@ -178,5 +178,32 @@ inner join [dbo].[Order_Status]
 on [dbo].[Order_Status].Order_ID=[dbo].[KMS Sql Case Study].Order_ID
 ````
 
+- ## Advise to the management of KMS on what to do to increase the revenue from the bottom 10 customers
+
+| Customer Name      | Product Description                                                    | product_Category | Order_Priority       | Shipping Mode   | Shipping Cost | Profit       |
+|--------------------|------------------------------------------------------------------------|--------------|----------------|------------------|----------------|--------------|
+| Roy Phan           | Polycom ViewStation™ ISDN Videoconferencing Unit                      | Technology   | Low            | Regular Air      | 24.00          | -14,141.00   |
+| Laurel Workman     | Polycom ViewStation™ ISDN Videoconferencing Unit                      | Technology   | Medium         | Regular Air      | 24.00          | -12,558.00   |
+| Adrian Barton      | Polycom ViewStation™ ISDN Videoconferencing Unit                      | Technology   | Not Specified  | Regular Air      | 24.00          | -11,984.00   |
+| Maxwell Schwartz   | Canon imageCLASS 2200 Advanced Copier                                 | Technology   | High           | Regular Air      | 24.00          | -11,861.00   |
+| Nathan Mautz       | Canon imageCLASS 2200 Advanced Copier                                 | Technology   | Medium         | Express Air      | 24.00          | -11,769.00   |
+| Julia West         | Riverside Palais Royal Lawyers Bookcase, Royale Cherry Finish         | Furniture    | Critical       | Delivery Truck   | 45.00          | -11,054.00   |
+| Roger Demir        | Polycom ViewStation™ ISDN Videoconferencing Unit                      | Technology   | Not Specified  | Regular Air      | 24.00          | -10,264.00   |
+| Julia Barnett      | Riverside Palais Royal Lawyers Bookcase, Royale Cherry Finish         | Furniture    | Not Specified  | Delivery Truck   | 45.00          | -9,612.00    |
+| Cyra Reiten        | Canon imageCLASS 2200 Advanced Copier                                 | Technology   | Not Specified  | Regular Air      | 24.00          | -9,079.00    |
+| Irene Maddox       | Okidata Pacemark 4410N Wide Format Dot Matrix Printer                 | Technology   | High           | Delivery Truck   | 9.00           | -8,570.00    |
+
+#### Above is the table containing the bottom 10 customers.
+#### Looking at the bottom 10 customers by total profit, they all show negative profits, meaning the company is losing money on these transactions.
+### ADVICE TO THE MANAGEMENT:
+#### The company should urgently evaluate the pricing, shipping strategy, and customer profitability. High losses from low-priority customers using expensive shipping methods show inefficiencies. Adjusting the shipping mode, reevaluating product margins, and possibly restructuring customer agreements can help turn losses into profits.
+
+
+
+- ### If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
+### MY VIEW:
+#### Based on my deep analysis, it a NO because The company appears to be mismanaging its shipping strategy, spending more on low-priority orders while underinvesting in urgent ones. This imbalance, along with recurring losses, points to an urgent need to realign logistics with order priority and improve cost control.
+
+
 
 
