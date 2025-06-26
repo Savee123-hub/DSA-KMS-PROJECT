@@ -39,7 +39,7 @@ Here, I present essential code, queries, I applied throughout the data analysis 
 
 ### SQL QUERIES AND ANSWERS 
 - To get Which product category had the highest sales, run the below query.
-  - The result given is "Technology Category" with Total_Sales of "5984248.183"
+  - The result given is "Technology Category" 
 
   ```` Sql
    SELECT 
@@ -72,5 +72,16 @@ GROUP BY Region
 order by total_sales ASC
 ````
 
+- To get the total sales of appliances in Ontario, run the below query.
+  - The result given is "202346.840"
+
+```` Sql
+SELECT 
+	Region, sum(Sales)as total_sales , Product_Sub_Category
+FROM [dbo].[KMS Sql Case Study]
+WHERE REGION = 'ONTARIO'and Product_Sub_Category='Appliances'
+GROUP BY Region,Product_Sub_Category
+order by total_sales
+````
 
 
