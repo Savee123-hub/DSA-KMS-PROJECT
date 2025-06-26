@@ -133,11 +133,50 @@ group by customer_name,customer_segment
 order by highest_sales desc
 ```` 
 
+- ### To get Which Corporate Customer placed the most number of orders in 2009 – 2012, run the below query.
+  - The result given is "Roy Skaria"
 
+````sql
+  alter table [dbo].[KMS Sql Case Study]
+add order_year int
 
+update [dbo].[KMS Sql Case Study]
+set order_year =year(order_date)
 
+select top 1
+Customer_Name,Customer_Segment,count (distinct Order_year)as sumed_year,
+sum(Order_Quantity)as most_Orders
+from [dbo].[KMS Sql Case Study]
+where Customer_Segment='Corporate' 
+group by Customer_Name,Customer_Segment
+order by most_Orders desc
+````
 
+- ### To get Which consumer customer was the most profitable one, run the below query.
+  - The result given is "Emily Phan"
 
+````sql
+   select top 1
+customer_name, customer_segment, sum (profit) as most_profitable
+from[dbo].[KMS Sql Case Study]
+where customer_segment= 'Consumer'
+group by customer_name, customer_segment
+order by most_profitable desc
+````
+
+- ### To get Which customer returned items, and what segment they belong to, run the below query.
+  - The result given is "see result afer running the query below"
+
+````sql
+   select distinct
+[dbo].[KMS Sql Case Study].Order_ID,
+[dbo].[KMS Sql Case Study].Customer_Name,
+[dbo].[KMS Sql Case Study].Customer_Segment,
+[dbo].[Order_Status].Status
+from[dbo].[KMS Sql Case Study]
+inner join [dbo].[Order_Status]
+on [dbo].[Order_Status].Order_ID=[dbo].[KMS Sql Case Study].Order_ID
+````
 
 
 
