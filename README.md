@@ -12,5 +12,11 @@ This project is based on two primary datasets: “KMS SQL Case Study.csv” and 
 ### TOOL USED
 - SQL Server (For data querying and analysis)  [Download here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
  
+### Data cleaning and Preparation
+The data cleaning and preparation stage includes:  
+1. Importing the data and reviewing its structure  
+2. Managing any missing or incomplete values  
+3. Formatting and cleaning the data to ensure consistency and readiness for analysis
+
 
 
